@@ -5,11 +5,13 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// Metodo que carga la url de nuestra base de datos:
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
+// Creacion de modelo de tablas:
 model account {
   id   String @id @default(uuid())
   pass String @db.VarChar(100)
