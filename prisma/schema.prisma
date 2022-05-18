@@ -18,11 +18,6 @@ model account {
 }
 
 model user {
-  id   String @id @default(uuid())
-  type Type
-}
-
-enum Type {
-  usuario
-  conductor
+  id   String @id
+  type String @default("Usuario")
 }
